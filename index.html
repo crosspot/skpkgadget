@@ -17,20 +17,24 @@
             
 
             let hasil = "";
-            for (index in gadget ){
-                hasil += gadget[index].nama+"<br>";
-                hasil += gadget[index].foto+"<br>";
-                hasil += gadget[index].harga+"<br>"+"<button>Tambahkan ke keranjang</button>"+"<br>";
+            for (index in Hp ){
+                hasil += "<h1>"+Hp[index].Nama+"</h1>";
+                hasil += "<img src='"+Hp[index].Foto+"' width='300'><br>";
+                hasil +=  "<h2> Rp. "+Number(Hp[index].Harga).toLocaleString('ID-id')+"</h2>"
+                        +"<button onClick='showalert()'>Tambahkan ke keranjang</button>"+"<br>";
                 
             }
             document.getElementById("produk").innerHTML = hasil;
 
+            function showalert(){
+                alert("Sudah Berhasil dimasukkan keranjang")
+            }
             var cari = prompt("Masukan nama HP");
 
            
                  function cek() {
-                    for (index in gadget) {
-                if(cari == gadget[index].nama) {
+                    for (index in Hp) {
+                if(cari == Hp[index].Nama) {
                     return true;
                 }             
                 }
