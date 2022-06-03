@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            SKPK GADGET
+        </title>
+    </head>
+    <body>
+        <div id="produk">
+
+        </div>
+
+        <script src="script.js"></script>
+
+        <script type="text/javascript">
+
+            
+
+            let hasil = "";
+            for (index in gadget ){
+                hasil += gadget[index].nama+"<br>";
+                hasil += gadget[index].foto+"<br>";
+                hasil += gadget[index].harga+"<br>"+"<button>Tambahkan ke keranjang</button>"+"<br>";
+                
+            }
+            document.getElementById("produk").innerHTML = hasil;
+
+            var cari = prompt("Masukan nama HP");
+
+           
+                 function cek() {
+                    for (index in gadget) {
+                if(cari == gadget[index].nama) {
+                    return true;
+                }             
+                }
+            }
+
+if(cek(cari)){
+    alert(ketemu)
+} else {
+    alert("Tidak ketemu")
+}
+
+cek()
+    </script>
+
+
+    </body>
+</html>
